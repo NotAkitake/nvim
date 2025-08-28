@@ -1,0 +1,22 @@
+Windows Registry Editor Version 5.00
+
+; Right-click file -> Open with NeoVim in WT
+[HKEY_CLASSES_ROOT\*\shell\Open with NeoVim]
+@="Edit with NeoVim"
+"Icon"="C:\\Program Files\\Neovim\\bin\\nvim.exe"
+[HKEY_CLASSES_ROOT\*\shell\Open with NeoVim\command]
+@="wt.exe --window 0 -d \"%W\" nvim \"%1\""
+
+; Right-click folder -> Open with NeoVim in WT
+[HKEY_CLASSES_ROOT\Directory\shell\Open with NeoVim]
+@="Open with NeoVim"
+"Icon"="C:\\Program Files\\Neovim\\bin\\nvim.exe"
+[HKEY_CLASSES_ROOT\Directory\shell\Open with NeoVim\command]
+@="wt.exe --window 0 -d \"%1\" nvim"
+
+; Right-click empty space in a folder -> Open with NeoVim (current folder) in WT
+[HKEY_CLASSES_ROOT\Directory\Background\shell\Open with NeoVim]
+@="Open with NeoVim"
+"Icon"="C:\\Program Files\\Neovim\\bin\\nvim.exe"
+[HKEY_CLASSES_ROOT\Directory\Background\shell\Open with NeoVim\command]
+@="wt.exe --window 0 -d \"%V\" nvim"
