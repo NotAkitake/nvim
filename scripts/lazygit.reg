@@ -1,0 +1,23 @@
+Windows Registry Editor Version 5.00
+
+; Right-click file -> Open Lazygit in containing folder
+[HKEY_CLASSES_ROOT\*\shell\Open Lazygit]
+@="Open Parent Dir with Lazygit"
+"Icon"="C:\\Users\\akitake\\.config\\nvim\\scripts\\git.ico"
+[HKEY_CLASSES_ROOT\*\shell\Open Lazygit\command]
+@="wt.exe -d \"%W\" lazygit"
+
+; Right-click folder -> Open Lazygit
+[HKEY_CLASSES_ROOT\Directory\shell\Open Lazygit]
+@="Open with Lazygit"
+"Icon"="C:\\Users\\akitake\\.config\\nvim\\scripts\\git.ico"
+[HKEY_CLASSES_ROOT\Directory\shell\Open Lazygit\command]
+@="wt.exe -d \"%1\" lazygit"
+
+; Right-click empty space in folder -> Open Lazygit
+[HKEY_CLASSES_ROOT\Directory\Background\shell\Open Lazygit]
+@="Open with Lazygit"
+"Icon"="C:\\Users\\akitake\\.config\\nvim\\scripts\\git.ico"
+[HKEY_CLASSES_ROOT\Directory\Background\shell\Open Lazygit\command]
+@="wt.exe -d \"%V\" lazygit"
+
