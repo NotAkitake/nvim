@@ -1,1 +1,1 @@
-vim.o.shell = "pwsh.exe"
+vim.o.shell = "pwsh"
