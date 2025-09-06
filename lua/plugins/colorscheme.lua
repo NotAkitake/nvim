@@ -9,7 +9,7 @@ return {
       light = "frappe",
       dark = "macchiato",
     },
-    transparent_background = true,
+    transparent_background = false,
     term_colors = true,
     default_integrations = true,
     auto_integrations = true,
